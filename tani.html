@@ -1,0 +1,62 @@
+<body>
+    <!-- INI PAGE ZAKAT PERTANIAN -->
+      <div data-role="page" data-title="Rumah" id="zakattani" class="satu" >
+      	<div data-role="header" data-position="fixed" data-theme="b">
+        	<h1>Zakat Pertanian</h1>
+            <a href="index.html" rel="external" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="slide">Home</a>
+            <a href="index.html" rel="external" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="fade">Back</a>
+        </div>        
+        <div data-role="content">
+        <form name="form">
+        	<table width="100%" class="biru">
+            <tr>
+            <td width="270px">Hasil Pertanian (Kg)</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="number" id="hsl" placeholder="150xxx" name="data"></td>
+            </tr>            
+            <tr>
+            <td>Harga /Kg hasil Pertanian</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="number" id="harga" placeholder="10000xxxxx" name="data1"></td>
+            </tr>            
+            <tr>
+            <td>Biaya Pupuk, Bibit, dll</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="number" id="biaya" placeholder="10000xxxxx" name="data2"></td>
+            </tr>            
+            <tr>
+            <td>Jenis Pengairan</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><select id="jenis">
+            <option value="air">Air Hujan</option>
+            <option value="siram">Disiram / Irigasi</option></select></td>
+            </tr>
+            </table><br>
+            <div>
+            <textarea name="hasil" id="hasil" readonly class="hasil"></textarea>
+            </div>
+            <br>
+			<table width="100%">
+            <tr>
+	        <td><input type="reset" value="hapus" data-theme="a" width="25%" onClick="rest()"></td>
+             <td><input type="button" value="hitung" data-theme="a" width="25%" onClick="tani()"></td> 
+            </tr>
+			</table>            
+        </form>	
+        </div>        
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        	<h4>Cyber Team Copyright &copy; 2013</h4>
+        </div>        
+      </div>
+      
+      
+    </body>
+</html>
