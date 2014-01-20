@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"> 
+	 
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.1.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.mobile-1.2.1.min.js"></script>
+    <script src="js/ternak.js"></script>
+    <script src="js/cordova-1.9.0.js"></script>
+    <style>
+		.ui-btn span{border:0;}
+		.hasil{visibility:hidden; position:absolute;}
+	</style>  
+
+    <script type="text/javascript" charset="utf-8">  
+        var onDeviceReady = function() {
+            document.getElementById("devready").innerHTML = "OnDeviceReady fired.";
+        };
+        function init() {
+            document.addEventListener("deviceready", onDeviceReady, true);
+        			
+		};
+    </script>  
+    
+    <title>Ayo Zakat</title>  
+</head> 
+	<body>
+    <!-- INI PAGE ZAKAT HEWAN TERNAK -->
+       <div data-role="page" data-title="Rumah" id="zakatternak" class="satu" >
+      	<div data-role="header" data-position="fixed" data-theme="b">
+        	<h1>Zakat Hewan Ternak</h1>
+            <a href="index.html" rel="external" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="slide">Home</a>
+            <a href="hitung.html" rel="external" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="fade">Back</a>
+        </div>        
+        <div data-role="content">
+        <form name="form">
+        	<table width="100%" class="biru">
+            <tr>
+            <td width="270px">Jumlah Kambing (ekor)</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="number" id="kambing" placeholder="10xx" name="data"></td>
+            </tr>            
+            <tr>
+            <td>Jumlah Sapi (ekor)</td>
+            <td> : </td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="number" id="sapi" placeholder="10xx" name="data1"></td>
+            </tr>      
+            </table><br>
+            <div>
+            <textarea type="text" name="hasil" id="hasil" readonly="readonly" class="hasil" rows="70" cols="25"></textarea>
+            </div>
+            <br>
+			<table width="100%">
+            <tr>
+	        <td><input type="reset" value="hapus" data-theme="a" width="25%" onClick="rest()"></td>
+             <td><input type="button" value="hitung" data-theme="a" width="25%" onClick="ternak()"></td> 
+            </tr>
+			</table>            
+        </form>	
+        </div>        
+        <div data-role="footer" data-position="fixed" data-theme="b">
+        	<h4>Cyber Team Copyright &copy; 2013</h4>
+        </div>
+      </div>
+      
+    </body>
+</html>
