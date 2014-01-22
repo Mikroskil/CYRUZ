@@ -9,40 +9,37 @@ function validasi(){
 	
 		if(!ceknilai())
 		{
-			alert("Silahkan Masukan angka atau isi semua data dengan benar");
+			alert("Jangan Dikosongi");
 		}
-}
-
-function rest(){
-	location.reload();
 }
 
 function zakatniaga(){
 	validasi();
-	var modal = document.getElementById('modal').value;
-	var uang = document.getElementById('uang').value;
-	var piutang = document.getElementById('piutang').value;
-	var utang = document.getElementById('utang').value;
-	var total, bersih, zakat;
+	var modal = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('modal').value)))));
+	var tunai = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('uang').value)))));
+	var piutang = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('piutang').value)))));
+	var utang = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('utang').value)))));
+	var total, bersih, zakat, zakat2;
 	
-	total = parseFloat(modal)+parseFloat(uang)+parseFloat(piutang);
+	total = parseFloat(modal)+parseFloat(tunai)+parseFloat(piutang);
 	bersih = parseFloat(total) - parseFloat(utang);
 	
+	
 	zakat = 0.025 * parseFloat(bersih);
+	zakat2 = zakat.toFixed(0);
 	var msg = "";
-	msg += "Hasil Perhitungan Zakat Adalah Rp. " + zakat;
+	msg += "Rp. " + hasil(zakat2);
 	document.form.hasil.value = msg;
 	
 	if(ceknilai()){
-	if(document.getElementById('hasil').style.visibility == "hidden"){
-		document.getElementById('hasil').style.visibility = "visible";
-		document.getElementById('hasil').style.position = "relative";
+	if(document.getElementById('tempathasil').style.visibility == "hidden"){
+		document.getElementById('tempathasil').style.visibility = "visible";
+		document.getElementById('tempathasil').style.position = "relative";
 	}
 	else{
-		document.getElementById('hasil').style.visibility = "visible";
-		document.getElementById('hasil').style.position = "relative";
+		document.getElementById('tempathasil').style.visibility = "visible";
+		document.getElementById('tempathasil').style.position = "relative";
 		}
 	}
-		
-	
 }
+		
