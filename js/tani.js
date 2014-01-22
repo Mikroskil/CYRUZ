@@ -9,28 +9,17 @@ function validasi(){
 	
 		if(!ceknilai())
 		{
-			alert("Silahkan Masukan angka atau isi semua data dengan benar");
-		}
-}
-
-function rest(){
-	if(document.getElementById('hasil').style.visibility == "visible"){
-		document.getElementById('hasil').style.visibility = "hidden";
-		document.getElementById('hasil').style.position = "absolute";
-	}
-	else{
-		document.getElementById('hasil').style.visibility = "hidden";
-		document.getElementById('hasil').style.position = "absolute";
+			alert("Jangan Dikosongi");
 		}
 }
 
 function tani(){
-	//validasi();
+	validasi();
 	var jenis = document.getElementById('jenis').value;
-	var biaya = document.getElementById('biaya').value;
-	var harga = document.getElementById('harga').value;
-	var hasil = document.getElementById('hsl').value;
-	var zakat, total, bersih;
+	var biaya = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('biaya').value)))));
+	var harga = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('harga').value)))));
+	var hasil = bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(bersihPemisah(document.getElementById('hsl').value)))));
+	var zakat, total, bersih, zakat2;
 	
 	total = parseFloat(hasil) * parseFloat(harga);
 	
@@ -44,19 +33,20 @@ function tani(){
 	else{
 		zakat = parseFloat(bersih) * 0.05;
 	}
+	zakat2 = zakat.toFixed(0);
 	
 	var msg = "";
-	msg += "Zakat Yang Harus Anda Keluarkan Adalah Sebesar Rp. " + zakat.toFixed(2);
+	msg += "  Rp. " + tandaPemisahTitik(zakat2);
 	document.form.hasil.value = msg;
 	
 	if(ceknilai()){
-	if(document.getElementById('hasil').style.visibility == "hidden"){
-		document.getElementById('hasil').style.visibility = "visible";
-		document.getElementById('hasil').style.position = "relative";
+	if(document.getElementById('tempathasil').style.visibility == "hidden"){
+		document.getElementById('tempathasil').style.visibility = "visible";
+		document.getElementById('tempathasil').style.position = "relative";
 	}
 	else{
-		document.getElementById('hasil').style.visibility = "visible";
-		document.getElementById('hasil').style.position = "relative";
+		document.getElementById('tempathasil').style.visibility = "visible";
+		document.getElementById('tempathasil').style.position = "relative";
 		}
 	}
 	
