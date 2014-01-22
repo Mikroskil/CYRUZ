@@ -8,6 +8,8 @@
 	<script src="js/jquery.mobile-1.2.1.min.js"></script>
     <script src="js/tani.js"></script>
     <script src="js/cordova-1.9.0.js"></script>
+     <script src="js/konversi.js">
+    </script>
     <style>
 		.ui-btn span{border:0;}
 		.hasil{visibility:hidden; position:absolute;}
@@ -42,7 +44,7 @@
             <table width="100%">
             <tr>
             <td>
-            <input type="text" id="hsl" name="data" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            <input type="text" id="hsl" name="data" onKeyDown="return numbersonly(this, event);" onKeyUp="javascript:tandaPemisahTitik(this);"></td>
             <td width="15%"><input type="text"  readonly value="Kg"></td>
             </tr>
             </table>
@@ -57,7 +59,7 @@
             <tr>
             <td width="15%"><input type="text"  readonly value="Rp."></td>
             <td>
-            <input type="text" id="harga" name="data1" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            <input type="text" id="harga" name="data1" required onKeyDown="return numbersonly(this, event);" onKeyUp="javascript:tandaPemisahTitik(this);"></td>
             </tr>
             </table>
             </td>
@@ -71,7 +73,7 @@
             <tr>
             <td width="15%"><input type="text"  readonly value="Rp."></td>
             <td>
-            <input type="text" id="biaya" name="data2" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            <input type="text" id="biaya" name="data2" required onKeyDown="return numbersonly(this, event);" onKeyUp="javascript:tandaPemisahTitik(this);"></td>
             </tr>
             </table>            
             </td>
