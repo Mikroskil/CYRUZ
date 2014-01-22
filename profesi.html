@@ -39,28 +39,51 @@
             <a href="hitung.html" rel="external" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="fade">Back</a>
         </div>        
         <div data-role="content">
-        <form name="form">
+         <form name="form">
         	<table width="100%" class="biru">
             <tr>
-            <td>Gaji / Bulan</td>
-            <td> : </td>
+            <td width="75%">Gaji / Bulan</td>
+            <td width="25%"> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="gaji" placeholder="150xxx" name="data"></td>
-            </tr>            
+            <td colspan="2">
+            <table width="100%">
             <tr>
-            <td>Bonus / Pendapatan lain selama setahun</td>
-            <td> : </td>
+            <td width = "15%"><input type="text" readonly value="Rp."></td>
+            <td><input type="text" id="gaji" name="data" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" placeholder="1.000.xxx">
+            </tr>
+            </table>
+            </td>
+            </tr>   
+                     
+            <tr>
+            <td width="75%">Bonus / Pendapatan lain selama setahun</td>
+            <td width="25%"> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="bonus" placeholder="10000xxxxx" name="data1"></td>
-            </tr>            
+            <td colspan="2">
+            <table width="100%">
             <tr>
-            <td>Pengeluaran Pokok / Bulan</td>
-            <td> : </td>
+            <td width = "15%"><input type="text" readonly value="Rp."></td>
+            <td><input type="text" name="data1" id="bonus" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" placeholder="1.000.xxx">
+            </tr>
+            </table>
+            </td>
+            </tr>         
+               
+            <tr>
+            <td width="75%">Pengeluaran Pokok / Bulan</td>
+            <td width="25%"> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="keluar" placeholder="10000xxxxx" name="data2"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width = "15%"><input type="text" readonly value="Rp."></td>
+            <td><input type="text" id="keluar" name="data2" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" placeholder="1.000.xxx">
+            </tr>
+            </table>
+            </td>
             </tr>            
             </table><br>
             <div>
