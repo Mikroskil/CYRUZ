@@ -35,29 +35,49 @@
         <form name="form">
         	<table width="100%" class="biru">
             <tr>
-            <td width="270px">Hasil Pertanian (Kg)</td>
-            <td> : </td>
+            <td width="270px">Hasil Pertanian</td>          
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="hsl" placeholder="150xxx" name="data"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td>
+            <input type="text" id="hsl" name="data" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            <td width="15%"><input type="text"  readonly value="Kg"></td>
+            </tr>
+            </table>
+            </td>
             </tr>            
             <tr>
             <td>Harga /Kg hasil Pertanian</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="harga" placeholder="10000xxxxx" name="data1"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="15%"><input type="text"  readonly value="Rp."></td>
+            <td>
+            <input type="text" id="harga" name="data1" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>
+            </td>
             </tr>            
             <tr>
             <td>Biaya Pupuk, Bibit, dll</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="biaya" placeholder="10000xxxxx" name="data2"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="15%"><input type="text"  readonly value="Rp."></td>
+            <td>
+            <input type="text" id="biaya" name="data2" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>            
+            </td>
             </tr>            
             <tr>
             <td>Jenis Pengairan</td>
-            <td> : </td>
             </tr>
             <tr>
             <td colspan="2"><select id="jenis">
