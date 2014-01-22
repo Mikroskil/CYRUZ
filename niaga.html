@@ -39,38 +39,69 @@
         </div>
         <div data-role="content">
         <form name="form">
-        <div data-theme="a" data-role="content" style="border-radius:10px;">
-        	<table width="100%" >
+        	<table width="100%" class="biru">
             <tr>
             <td width="270px">Modal Diputar/Barang Belum Terjual</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="modal" required name="data"></td>
-            </tr>    
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="15%"><input type="text" readonly value="Rp."></td>
+            <td>
+            <input type="text" id="modal" name="data" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>
+            </td>
+            </tr>   
+             
             <tr>
             <td>Jumlah Uang Tunai</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input  type="number" id="uang" required name="data1"></td>
-            </tr>            
+            <td colspan="2">
+            <table width="100%">
             <tr>
+            <td width="15%"><input type="text" readonly value="Rp."></td>
+            <td>
+            <input type="text" id="uang" name="data1" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>
+            </td>
+            </tr>            
+            
+            <tr>            
             <td>Jumlah Seluruh Piutang</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="piutang" required name="data2"></td>
-            </tr>            
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="15%"><input type="text" readonly value="Rp."></td>
+            <td>
+            <input type="text" id="piutang" name="data2" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>            
+            </td>
+            </tr>
+                        
             <tr>
             <td>Jumlah Seluruh Utang</td>
-            <td> : </td>
             </tr>
             <tr>
-            <td colspan="2"><input type="number" id="utang" required name="data3"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="15%"><input type="text"  readonly value="Rp."></td>
+            <td>
+            <input type="text" id="utang" name="data3" required onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            </tr>
+            </table>
+            </td>
             </tr>
             </table>
             </div>
+            
              <div>
             <textarea name="hasil" id="hasil" readonly class="hasil"></textarea>
             </div>
@@ -83,7 +114,7 @@
            
                         
         </form>	
-        </div>        
+              
         <div data-role="footer" data-position="fixed" data-theme="b">
         	<h4>Cyber Team Copyright &copy; 2013</h4>
         </div>        
