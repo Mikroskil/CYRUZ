@@ -37,21 +37,39 @@
         <form name="form">
         	<table width="100%" class="biru">
             <tr>
-            <td width="270px">Jumlah Emas Seluruhnya(gram)</td>
+            <td width="270px">Jumlah Emas Seluruhnya (gram)</td>
             <td> : </td>
             </tr>
+            
             <tr>
-            <td colspan="2"><input type="number" id="emas1" placeholder="10xx" name="data1"></td>
+            <td colspan="2">
+            <table width="100%">
+            <tr>
+            <td width="80%"><input type="text" name="data1" id="emas1" placeholder="10xx" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+			<td width="20%"><input type="text" readonly value="Gram"></td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+                        
+            <tr>
+            <td>Jumlah Emas yang Dipakai</td>
+            <td> : </td>
             </tr>            
             <tr>
-            <td>Jumlah Emas yang Dipakai (gram)</td>
-            <td> : </td>
-            </tr>
+            <td colspan="2">
+            <table width="100%">
             <tr>
-            <td colspan="2"><input type="number" id="emas2" placeholder="10xx" name="data"></td>
+            <td width="80%"><input type="text" name="data" id="emas2" placeholder="10xx" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);">
+            </td>
+            <td width="20%"><input type="text" readonly value="Gram"></td>
+            </tr>
+            </table>
+            </td>
             </tr>          
-            </table><br>
-             <div>
+            
+            </table>
+            <br>             <div>
             <textarea name="hasil" id="hasil" readonly class="hasil"></textarea>
             </div>
             <br><br>
