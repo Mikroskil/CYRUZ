@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+.putih{
+	background:#FFF;
+	border-radius:10px
+	}
+
+p{
+	color:#000
+	}
+
+.bg{
+	background-image:url(../img/bg.png); 
+	-moz-background-size:100%; 
+	-webkit-background-size:100%;
+	background-repeat:no-repeat;
+	width:100%;
+	
+	}
+
+
+
+
+
+.gradient{
+	 background-color: #D43F00;
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(rgba(212,95,0,1)), to(#D43F00));
+    background: -webkit-radial-gradient(circle,rgba(212,95,0,1), #D43F00 );
+    background: -moz-radial-gradient(circle, rgba(212,95,0,1), #D43F00);
+    background: -ms-radial-gradient(circle, rgba(212,95,0,1), #D43F00);
+
+}
+
+.biru{
+	background-color:#3C4244;
+	border-radius:7px;
+}
+
+td{
+	color:#FFF;
+}
+
+h1{font:Verdana, Geneva, sans-serif;
+color:#0FF;
+}
+h4{font:Verdana, Geneva, sans-serif;
+color:#0FF;
+}
