@@ -8,10 +8,10 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.mobile-1.2.1.min.js"></script>
     <script src="js/tambang.js"></script>
+    <script src="js/konversi.js"></script>
     <script src="cordova-1.9.0.js"></script>
     <style>
 		.ui-btn span{border:0;}
-		.hasil{visibility:hidden; position:absolute;}
 	</style>  
 
     <script type="text/javascript" charset="utf-8">  
@@ -28,9 +28,9 @@
 </head> 
 	<body>
     <!-- INI PAGE ZAKAT TAMBANG -->
-      <div data-role="page" data-title="Rumah" id="zakattambang" class="satu" >
-      	<div data-role="header" data-position="fixed" data-theme="b">
-        	<h1>Zakat Barang Tambang</h1>
+      <div data-role="page" data-title="Rumah" id="zakattambang" class="gradient">
+      	<div data-role="header" data-position="fixed" data-theme="a">
+        	<h4 style="font-size:18px">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h4>
             <a href="index.html" rel="external" data-icon="home" data-iconpos="notext" data-direction="reverse" data-transition="slide">Home</a>
             <a href="hitung.html" rel="external" data-icon="back" data-iconpos="notext" data-direction="reverse" data-transition="fade">Back</a>
         </div>        
@@ -38,8 +38,8 @@
         <form name="form">
         	<table width="100%" class="biru">
             <tr>
-            <td>Jenis Barang Tambang</td>
-            <td> : </td>
+            <td width="60%">Jenis Barang Tambang</td>
+            <td width="40%"> : </td>
             </tr>
             <tr>
             <td colspan="2"><select id="jenis">
@@ -47,16 +47,36 @@
             <option value="perak">Perak</option></select></td>
             </tr>            
             <tr>
-            <td>Berat Hasil Tambang (gram)</td>
+            <td>Berat Hasil Tambang</td>
             <td> : </td>
             </tr>
+            <tr>            
+            <td colspan="2">
+            <table width="100%">
             <tr>
-            <td colspan="2"><input type="text" id="berat" placeholder="10xx" name="data"></td>
+            <td width="75%"><input type="text" id="berat" name="data" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);"></td>
+            <td width = "25%"><input type="text" readonly value="Gram"></td>
+            </tr>
+            </table>
+            </td>
             </tr>            
-            </table><br><br>
-            <div>
-            <textarea name="hasil" id="hasil" readonly class="hasil"></textarea>
-            </div><br><br>
+            </table><br>
+            <div id="tempathasil" style="visibility:hidden; position:absolute" class="putih">
+             <br>
+             <center>Zakat Profesi anda sebesar : 
+             <div class="putih">
+            <table width="50%"><tr>
+            <td width="50%">
+			<textarea name="hasil" id="hasil" readonly></textarea>
+            </td></tr>
+            </table>
+            </div>
+            </center>
+             </div>
+            <br>
+            
+            
+            
 			<table width="100%">
             <tr>
 	        <td><input type="reset" value="hapus" data-theme="a" width="25%" onClick="rest()"></td>
@@ -65,7 +85,7 @@
 			</table>            
         </form>	
         </div>        
-        <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-position="fixed" data-theme="a">
         	<h4>Cyber Team Copyright &copy; 2013</h4>
         </div>        
       </div>
